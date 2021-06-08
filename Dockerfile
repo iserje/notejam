@@ -9,7 +9,7 @@ COPY requirements.txt /app
 
 RUN apt-get update \
     && apt-get install -y python3-psycopg2 \
-    && pip install --upgrade pip python3-psycopg2 \
+    && pip install --upgrade pip \
     && pip install -r /app/requirements.txt \
     && rm -rf /var/lib/apt/lists/*
 
