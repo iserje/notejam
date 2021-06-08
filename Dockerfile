@@ -8,7 +8,8 @@ WORKDIR /app
 COPY requirements.txt /app
 
 RUN apt-get update \
-    && pip install --upgrade pip \
+    && apt-get install -y python3-psycopg2 \
+    && pip install --upgrade pip python3-psycopg2 \
     && pip install -r /app/requirements.txt \
     && rm -rf /var/lib/apt/lists/*
 
