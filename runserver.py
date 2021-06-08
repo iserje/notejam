@@ -23,4 +23,4 @@ app.config.from_object(DevelopmentConfig)
 app.config['SQLALCHEMY_DATABASE_URI'] = DB_URL
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', port=80)
