@@ -1,4 +1,4 @@
-FROM python:3.9-slim
+FROM public.ecr.aws/bitnami/python:latest
 LABEL maintainer="Serge Ivanov serje@homtial.com"
 
 ENV PYTHONUNBUFFERED 1
