@@ -9,6 +9,7 @@ COPY requirements.txt /app
 
 RUN apt-get update \
     && apt-get install -y python3-psycopg2 \
+    && apt-get install -y --reinstall libpq-dev \
     && pip install --upgrade pip \
     && pip install -r /app/requirements.txt \
     && rm -rf /var/lib/apt/lists/*
